@@ -1,0 +1,139 @@
+{% if canRegister %}
+<h3>Register</h3>
+
+<div class="col-md-8 ">
+    <form onsubmit="$(this).request('onRegisterr', {files:true}); return false;" enctype="multipart/form-data" method="POST">
+        <div class="row ">
+          
+            <!-- first name input  -->
+            <div class=" col-sm-4 col-xs-6">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">First Name</h6>
+                    <input type="text" name="name" value="" placeholder="First Name" class="form-control"
+                        required />
+                </div>
+            </div>
+
+
+            <!-- Last Name Input  -->
+            <div class=" col-sm-4 col-xs-6">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Last Name</h6>
+                    <input type="text" name="surname" value="" placeholder="Last Name" class="form-control"
+                        required />
+                </div>
+            </div>
+
+
+            <!-- E-mail Input  -->
+            <div class=" col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Email</h6>
+                    <input type="email" name="email" value="" placeholder="example@esample.com"
+                        class="form-control" required />
+                </div>
+            </div>
+
+
+            {% if loginAttribute == "username" %}
+            <div class=" col-sm-12 col-xs-12">
+
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input name="username" type="text" class="form-control" id="registerUsername"
+                        placeholder="Enter your username" />
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Date of Birth Input  -->
+            <div class=" col-sm-4 col-xs-6">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Date of Birth</h6>
+                    <input type="date" name="date_of_birth" value="" placeholder="" class="form-control"
+                        required />
+                </div>
+            </div>
+
+            <!-- Address Input  -->
+            <div class=" col-sm-4 col-xs-6">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Address</h6>
+                    <input type="text" name="address" value="" placeholder="Kathmandu-32, Koteshwor"
+                        class="form-control" required />
+                </div>
+            </div>
+
+            <!-- Phone Input  -->
+            <div class=" col-sm-4 col-xs-6">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Phone</h6>
+                    <input type="text" name="phone" value="" placeholder="9800000000" class="form-control"
+                        required />
+                </div>
+            </div>
+
+
+            <!-- Profession Select  -->
+            <div class=" col-sm-6 col-xs-6">
+                <h6 class="demo-panel-title">Profession</h6>
+                <select class="form-control select select-primary" data-toggle="select" name="profession">
+                    <option value="0" selected>Select your profession</option>
+                    <option value="Student">Student</option>
+                    <option value="Government Service">Government Service</option>
+                    <option value="Business">Business</option>
+                    <option value="Un-Employed">un-employed</option>
+                </select>
+            </div>
+
+            <!-- Role Select  -->
+            <div class=" col-sm-6 col-xs-6">
+                <h6 class="demo-panel-title">Role</h6>
+                <select class="select2-container form-control select select-primary" data-toggle="select"
+                    name="user_role">
+                    <option value="0" selected>Select your role</option>
+                    <option value="Donor">Donor</option>
+                    <option value="Receiver">Receiver</option>
+                </select>
+            </div>
+
+            <!-- Password Input  -->
+            <div class=" col-sm-6 col-xs-6">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Password</h6>
+                    <input type="password" name="password" value="" placeholder="" class="form-control"
+                        required />
+                </div>
+            </div>
+
+
+            <!-- confidentiality input  -->
+            <div class=" col-sm-2 col-xs-4">
+                <div class="form-group">
+                    <h6 class="demo-panel-title">Confidential</h6>
+                    <input type="checkbox" data-toggle="switch" id="custom-switch-01" name="confidential" />
+                </div>
+            </div>
+
+
+
+            <!-- Space  -->
+            <div class=" col-sm-8 col-xs-4">
+                <input class="form-control" type="file" name="avatar"/>
+            </div>
+            <!-- Submit Botton  -->
+            <div class=" col-sm-2 col-xs-4">
+                <br />
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Register</button>
+            </div>
+
+
+        </div>
+    </form>
+
+    {% else %}
+    <h1>
+        Registration is disabled.
+
+    </h1>
+    {% endif %}

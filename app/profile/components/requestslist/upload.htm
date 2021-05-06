@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 5rem;">
+    <h3>Upload</h3>
+    <div class="col-md-8 ">
+        <form onsubmit="$(this).request('onUpload', {files:true}); return false;" enctype="multipart/form-data" method="POST">
+
+            <input type="text" name="hello" id="xxx" value="test"/>
+<img src="{{user.avatar.getpath}}" alt="User Image">
+            <!-- Space  -->
+            <div class=" col-sm-8 col-xs-4">
+                <input class="form-control" id="avatar" type="file" name="avatar" />
+            </div>
+
+            <!-- Submit Botton  -->
+            <div class=" col-sm-2 col-xs-4">
+                <br />
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

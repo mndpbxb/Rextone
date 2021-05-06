@@ -1,0 +1,6 @@
+plugin:
+    name: 'mandeep.profile::lang.plugin.name'
+    description: 'mandeep.profile::lang.plugin.description'
+    author: Mandeep
+    icon: oc-icon-camera-retro
+    homepage: ''

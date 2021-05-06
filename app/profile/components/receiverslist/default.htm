@@ -1,0 +1,27 @@
+{% set receivers = Receivers.receivers %}
+{% if (receivers | length) == NULL%}
+<h3>We do not have any registered receivers in our system. Please click <a href="{{url('register')}}">Here</a> to register yourself</h3>
+{% else %}
+<div class="container">
+    {%if (receivers | length)<=4 %} {% set div=12/(receivers | length) %} {% else %} {% set div=3 %} {% endif %} <div
+        class="row">
+        {% for receiver in receivers %}
+        <div class="col-md-{{div}}">
+            <img class="card-img-top" src="{% if receiver.avatar != NULL %}{{receiver.avatar.getPath()}}{%else%}https://source.unsplash.com/user/erondu/200x200{%endif%}" alt="Card image cap" height="200px" width="200px"
+                style="margin: 4rem 0 0 0 ;">
+            <div class="card-body">
+                <h5 class="card-title">{{receiver.name~' '~receiver.surname}}</h5>
+                <p class="card-text">{{ receiver.address }}</p>
+                <p class="card-text">{{ receiver.phone }}</p>
+                {% for request in receiver.requests %}
+                <p class="card-text">{{ request.title }}</p>
+                {% endfor %}
+                <a href="receivers/{{receiver.id}}">
+                    <button class="btn-primary" type="submit">Details</button>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+</div>
+</div>
+{% endif %}
