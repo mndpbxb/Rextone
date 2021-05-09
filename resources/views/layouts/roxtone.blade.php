@@ -9,46 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="resources/css/roxtone.css" rel="stylesheet">
-    <style>
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-            width: 100%;
-            height: 160px;
-        }
-
-        .navbar-nav {
-            margin-left: 24%;
-        }
-
-        .navmenu {
-            background: #2F3032;
-        }
-
-        .bg-light {
-            background-color: #2F3032 !important;
-        }
-
-        img {
-            height: 60px;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
-            margin-left: 36px;
-            color: white;
-            font-size: 19px;
-        }
-
-        .navbar-light .navbar-nav .nav-link:hover {
-            background-color: #feb800;
-            overflow: hidden;
-
-        }
-
-        a.nav-item.nav-link.active {
-            color: white !important;
-            background: #feb800;
-        }
-
-    </style>
+    <link href="{{asset('storage/css/roxtone-custom.css')}}" rel="stylesheet">
+   
 
 </head>
 
